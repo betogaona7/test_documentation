@@ -33,7 +33,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def fuse_documentation(code, tale, output_path, file_name, file_ext) -> None:
+def fuse_documentation(code, tale, output_path, file_name, file_ext):
     save_path = os.path.join(output_path, file_name)
     logger.info(f"save fused dev tale in: {save_path}")
 
