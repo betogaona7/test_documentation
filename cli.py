@@ -1,3 +1,10 @@
+"""@DEVTALE-GENERATED: This script enables users to quickly generate documentation for a
+repository, folder, or file using an OpenAI model. It provides options to explore
+subfolders, add docstrings to the code file, specify the output path, and mock answers to
+reduce GPT calls. The script simplifies and automates the process of creating
+documentation.
+"""
+
 import copy
 import getpass
 import json
@@ -34,6 +41,16 @@ logger = logging.getLogger(__name__)
 
 
 def fuse_documentation(code, tale, output_path, file_name, file_ext):
+    """@DEVTALE-GENERATED: This function is used to fuse the documentation with code.\
+
+    Args:\
+            code (str): The code that needs documentation.\
+            tale (str): The tale that is to be used for documentation.\
+            output_path (str): The path where the output needs to be saved.\
+            file_name (str): The name of the file.\
+            file_ext (str): The extension of the file.\
+        Returns:\
+            None. The function writes the fused tale to a file."""
     save_path = os.path.join(output_path, file_name)
     logger.info(f"save fused dev tale in: {save_path}")
 
