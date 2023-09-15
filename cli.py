@@ -33,7 +33,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def fuse_documentation(code, tale, output_path, file_name, file_ext):
+def fuse_documentation(code, tale, output_path, file_name, file_ext) -> None:
     save_path = os.path.join(output_path, file_name)
     logger.info(f"save fused dev tale in: {save_path}")
 
@@ -113,38 +113,6 @@ def main(
         os.environ["OPENAI_API_KEY"] = getpass.getpass(
             prompt="Enter your OpenAI API key: "
         )
-
-    if os.path.isdir(path):
-        if recursive:
-            logger.info("Processing repository")
-            process_repository(
-                root_path=path,
-                output_path=output_path,
-                model_name=model_name,
-                fuse=fuse,
-                debug=debug,
-            )
-        else:
-            logger.info("Processing folder")
-            process_folder(
-                folder_path=path,
-                output_path=output_path,
-                model_name=model_name,
-                fuse=fuse,
-                debug=debug,
-            )
-    elif os.path.isfile(path):
-        logger.info("Processing file")
-        process_file(
-            file_path=path,
-            output_path=output_path,
-            model_name=model_name,
-            fuse=fuse,
-            debug=debug,
-        )
-    else:
-        raise f"Invalid input path {path}. Path must be a directory or code file."
-
 
 if __name__ == "__main__":
     main()
