@@ -1,3 +1,9 @@
+"""This Python script uses OpenAI's GPT model to automatically generate and save
+documentation for code written in Python, PHP, Go, and Javascript. It provides various
+command line options for paths, recursion, fusion, output path, model name, and debug
+mode, enabling easy customization of the documentation process.
+"""
+
 import copy
 import getpass
 import json
@@ -34,6 +40,17 @@ logger = logging.getLogger(__name__)
 
 
 def fuse_documentation(code, tale, output_path, file_name, file_ext) -> None:
+    """This method is used to fuse the documentation with the code.
+
+    Args:
+        code (str): The source code.
+        tale (str): The documentation content.
+        output_path (str): The path where the result should be saved.
+        file_name (str): The name of the file.
+        file_ext (str): The file extension.
+
+    Returns:
+        None"""
     save_path = os.path.join(output_path, file_name)
     logger.info(f"save fused dev tale in: {save_path}")
 
