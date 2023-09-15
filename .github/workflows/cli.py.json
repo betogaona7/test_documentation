@@ -1,0 +1,14 @@
+{
+  "classes": [],
+  "methods": [
+    {
+      "method_name": "fuse_documentation",
+      "method_docstring": "This function is responsible for fusing the documentation with the code. It uses aggregators based on the file extension to document the code. The fused tale is then saved at the specified path.\n\nArgs:\n    code (str): The code string.\n    tale (str): The documentation string.\n    output_path (str): The path where the fused output is to be saved.\n    file_name (str): The name of the file.\n    file_ext (str): The extension of the file.\n\nReturns:\n    None"
+    },
+    {
+      "method_name": "main",
+      "method_docstring": "This is the main function of the program. It takes several command-line arguments and performs operations accordingly. It is responsible for loading environment variables and setting the OpenAI API key.\n\nArgs:\n    path (str): The path to the repository, folder, or file.\n    recursive (bool): Flag indicating whether to explore subfolders or not.\n    fuse (bool): Flag indicating whether to add the docstrings inside the code file or not.\n    output_path (str, optional): The destination folder where you want to save the documentation outputs. Defaults to DEFAULT_OUTPUT_PATH.\n    model_name (str, optional): The OpenAI model name you want to use. Defaults to DEFAULT_MODEL_NAME.\n    debug (bool, optional): Flag indicating whether to mock the answer and avoid GPT calls. Defaults to False.\n\nReturns:\n    None"
+    }
+  ],
+  "file_docstring": "\nThis code file provides a command-line interface for documentation and code fusion. It uses different aggregators for various file extensions, allows exploration of subfolders, and provides options for the OpenAI model, docstring and output folder specification, and debugging. It also prompts the user to enter an OpenAI API key if it is not set in the environment variables."
+}
