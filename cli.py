@@ -1,3 +1,10 @@
+"""@DEVTALE-GENERATED: This script is a command-line tool that fuses documentation into code
+from various languages including Python, PHP, Go, and Javascript. It takes several
+command-line arguments including the path to the file or directory, an output path for the
+documentation, and the name of the OpenAI model to use. It also supports recursive
+exploration of subdirectories, docstring insertion into code files, and debug mode.
+"""
+
 import copy
 import getpass
 import json
@@ -34,6 +41,10 @@ logger = logging.getLogger(__name__)
 
 
 def fuse_documentation(code, tale, output_path, file_name, file_ext):
+    """@DEVTALE-GENERATED: This method fuses the generated documentation with the corresponding
+    code. Args: code (str): The source code to document. tale (str): The generated
+    documentation. output_path (str): The path where the documented code will be saved.
+    file_name (str): The name of the file. file_ext (str): The extension of the file."""
     save_path = os.path.join(output_path, file_name)
     logger.info(f"save fused dev tale in: {save_path}")
 
