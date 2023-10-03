@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Document Code
-        uses: mystral-ai/devtale@v0.1.1
+        uses: mystral-ai/feat/make-installable
         with:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           path: ${{ github.workspace }}
